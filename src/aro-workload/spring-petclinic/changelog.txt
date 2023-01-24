@@ -1,0 +1,15 @@
+20-Sep-2021
+
+ Added RUM script & Bundled with image.
+
+ <!-- RUM Header --> 
+ <script charset='UTF-8' type='text/javascript'> 
+ window['egrum-start_time'] = new Date().getTime(); 
+ window['Site_Name'] = '620d636a-8fc5-458a-928d-0b8438ced3e9-1632124176743'; 
+ window['beacon-url'] = 'https://apm.eginnovations.com'; 
+ if(!window['egrum-config']) window['egrum-config'] = {}; (function (config) {config.capture = { jsError:true, resourceDetails:true, ajax:true, ajaxCorrelation:false, fetch:false, spa:false, overwriteBtmUName:false, excludeURLPattern:'none', ajaxExcludeURLPattern:'none', includeURLPattern:'*'};})(window['egrum-config']);
+ </script> 
+ <script src='https://apm.eginnovations.com/rumcollector/egrum.js' async> </script> 
+ 
+ <!-- RUM Header -->
+
