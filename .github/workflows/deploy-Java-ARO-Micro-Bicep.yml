@@ -13,7 +13,7 @@
 # - AZURE_SUBSCRIPTION
 # - AAD_CLIENT_ID
 # - AAD_CLIENT_SECRET
-# - AAD_OBJECT_ID '03228dcd-088f-44d0-b8a4-9f44cedb9958'
+# - AAD_OBJECT_ID 
 # - ARO_SP_OB_ID 
 # - PULL_SECRET
 # - ClusterRG ="/subscriptions/{subscription ID}/resourceGroups/petclinic-arospoke-westus"
@@ -40,11 +40,11 @@ env:
   ACR_NAME: 'petclinicaroacraz'
   ACR_FORM_NAME: 'petclinicaroacraz.azurecr.io'
   CLUSTER_NAME: 'petclinicarocluster'
-  AZURE_SUBSCRIPTION: '21295f92-d09c-42d7-8653-b7a76e26a3c5'
-  AAD_CLIENT_ID: '6efcf003-1100-4399-9af0-475c8159cf1f'
-  AAD_CLIENT_SECRET: 'gNc8Q~TbUlAjkGyj36IkmwnBxDtmY9fdtTFBjbpn'
-  AAD_OBJECT_ID: '6526713c-a378-4637-b3bd-f1876ce33eab'
-  ARO_SP_OB_ID: '50c17c64-bc11-4fdd-a339-0ecd396bf911'
+  AZURE_SUBSCRIPTION: ''
+  AAD_CLIENT_ID: ''
+  AAD_CLIENT_SECRET: ''
+  AAD_OBJECT_ID: ''
+  ARO_SP_OB_ID: ''
   JUMPBOX_ADMIN_USER: 'aroadmin'
   JUMPBOX_ADMIN_PWD: 'aroadmin123**'
 
