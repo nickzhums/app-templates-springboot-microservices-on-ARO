@@ -37,9 +37,9 @@ The newly created GitHub repo uses GitHub Actions to deploy Azure resources and 
 
     + AAD_CLIENT_SECRET
 
-    + AAD_OBJECT_ID
+    + AAD_SP_OB_ID
 
-    + ARO_SP_OB_ID
+    + ARO_Cluster_ID
 
     + AZURE CREDENTIALS
 
@@ -49,15 +49,15 @@ The newly created GitHub repo uses GitHub Actions to deploy Azure resources and 
 
 3. The following  parameters are required.
 
-| Property | Description | Valid Options | Default Value |
-|----------|-------------|---------------|---------------|
-| `pullSecret` | The pull secret that you obtained from the Red Hat OpenShift Cluster Manager web site.
-| `aadClientId` | The application ID (a GUID) of an Azure Active Directory (Azure AD) client application. | |
-| `aadObjectId` | The object ID (a GUID) of the service principal for the Azure AD client application. | |
-| `aadClientSecret` | The client secret of the service principal for the Azure AD client application, as a secure string. | |
-| `rpObjectId` | The object ID (a GUID) of the resource provider service principal. | |
-| `Azure_Credentials` | The JSON that is provided when you create a service principal. | |
-| `Azure_Subscription` | The Subscription ID of the resource provider service principal. | |
+| Property | Description | Default Value |
+|----------|-------------|---------------|
+| `pullSecret` | The pull secret that you obtained from the Red Hat OpenShift Cluster Manager web site.| |
+| `aadClientId` | The Service Prinicipal  Client ID  (a GUID) of  the service principal for the Azure AD client application. | AAD_CLIENT_ID |
+| `aadObjectId` | The Service Prinicipal Object ID (a GUID) of the service principal for the Azure AD client application. | AAD_SP_OB_ID |
+| `aadClientSecret` | The client secret of the service principal for the Azure AD client application, as a secure string. | AAD_CLIENT_SECRET |
+| `rpObjectId` | The object ID of the ARO Cluster. | ARO_Cluster_ID |
+| `Azure_Credentials` | The JSON that is provided when you create a Service Principal. | |
+| `Azure_Subscription` | The Subscription ID of the resource provider Service Principal. | |
 
 ### Azure Protal Permmision Configuration
 
