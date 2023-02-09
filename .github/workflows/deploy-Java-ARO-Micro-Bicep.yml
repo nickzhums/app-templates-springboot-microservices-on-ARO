@@ -14,7 +14,7 @@
 # - AAD_CLIENT_ID
 # - AAD_CLIENT_SECRET
 # - AAD_SP_OB_ID 
-# - ARO_Cluster_ID 
+# - ARO_CLUSTER_ID 
 # - PULL_SECRET
 # - ClusterRG ="/subscriptions/{subscription ID}/resourceGroups/petclinic-arospoke-westus"
 # - *** NOTE *** :  Remember to set the Location variable and the ClusterRG Location string in the "aro.parameters.json" File to match the Location Enviroment Variable. 
@@ -44,7 +44,7 @@ env:
   AAD_CLIENT_ID: ''
   AAD_CLIENT_SECRET: ''
   AAD_SP_OB_ID: ''
-  ARO_Cluster_ID: ''
+  ARO_CLUSTER_ID: ''
   JUMPBOX_ADMIN_USER: 'aroadmin'
   JUMPBOX_ADMIN_PWD: 'aroadmin123**'
 
@@ -245,7 +245,7 @@ jobs:
           aadClientId="${{ env.AAD_CLIENT_ID }}"
           aadClientSecret="${{ env.AAD_CLIENT_SECRET }}"
           aadObjectId="${{ env.AAD_SP_OB_ID }}"
-          rpObjectId="${{ env.ARO_Cluster_ID }}"
+          rpObjectId="${{ env.ARO_CLUSTER_ID }}"
           spokeVnetName="${{ env.SPOKE_VNET }}"
           addSpRoleAssignment='no'
           clusterRG="/subscriptions/${{ env.AZURE_SUBSCRIPTION }}/resourceGroups/petclinic-arospoke-westus"
