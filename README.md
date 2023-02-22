@@ -7,13 +7,11 @@ In this sample app template, the PetClinic application (a Spring Boot based app)
 --
 Tech stack:
 
-- Azure 
 - Azure PostgreSQL DB
 - Azure Container Registry (ACR)
 - Azure Red Hat Openshift (ARO) Cluster
 - Azure Infra (Hub & Spoke Toppology)
 - Azure Infra (VNet Peering)
-- Azure User Defined Routing (UDR)
 - Azure Fire Wall
 - Azure Bastion
 - Github Actions
