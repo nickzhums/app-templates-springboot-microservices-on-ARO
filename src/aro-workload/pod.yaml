@@ -1,0 +1,61 @@
+apiVersion: 2019-12-01
+location: westus
+name: petclinic
+properties:
+  containers:
+  - name: frontend-svc
+    image: spring-petclinic:frontend-svc
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: pets-svc
+    image: spring-petclinic:pets-svc
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: owners-svc
+    image: spring-petclinic:owners-svc
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: vets-svc
+    image: spring-petclinic:vets-svc
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"  
+  - name: visits-svc
+    image: spring-petclinic:visits-svc
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+  - name: mysql-db
+    image: spring-petclinic:mysql-db
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"   
+
+     

@@ -1,0 +1,10 @@
+com\springframework\samples\petclinic\vet\Vet.class
+com\springframework\samples\petclinic\vet\Vets.class
+com\springframework\samples\petclinic\vet\BaseEntity.class
+com\springframework\samples\petclinic\VetServiceApplication.class
+com\springframework\samples\petclinic\vet\URIConstants.class
+com\springframework\samples\petclinic\vet\Specialty.class
+com\springframework\samples\petclinic\vet\NamedEntity.class
+com\springframework\samples\petclinic\vet\VetRepository.class
+com\springframework\samples\petclinic\vet\Person.class
+com\springframework\samples\petclinic\vet\VetController.class
