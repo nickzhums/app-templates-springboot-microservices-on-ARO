@@ -10,7 +10,7 @@ Tech stack:
 - Azure PostgreSQL DB
 - Azure Container Registry (ACR)
 - Azure Red Hat Openshift (ARO) Cluster
-- Azure Infra (Hub & Spoke Toppology)
+- Azure Infra (Hub & Spoke Topology)
 - Azure Infra (VNet Peering)
 - Azure Fire Wall
 - Azure Bastion
@@ -27,7 +27,7 @@ Tech stack:
 This is a quickstart template. It deploys the following:
 
 * Deploying PetClinic App:
-  * Progres SQL Database configuration
+  * Postgres SQL Database configuration
   * Provisioning Azure Infra Services with BICEP
   * Create the spring-petclinic- build with Maven
   * Create an Azure Container Registry
@@ -74,7 +74,7 @@ Congratulations! Now you have your containerized Java Sping Boot App deployed on
 
 # Pet Clinic Website - IP Address 
 
-4. If you wish to view the PetClinic Deployment, follow the steps listed below:
+4. If you wish to view the PetClinic deployment, follow the steps listed below:
 - Log into the Azure Portal
 - Nagivate the the "petstore_spoke_eastus" Resource Group
 
