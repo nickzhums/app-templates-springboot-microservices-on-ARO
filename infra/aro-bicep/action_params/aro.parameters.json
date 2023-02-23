@@ -1,0 +1,93 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "tags": {
+      "value": {
+          "env": "dev",
+          "dept": "openshift"
+      }
+    },
+    "aadClientId": {
+      "value": ""
+    },
+    "aadClientSecret": {
+      "value": ""
+    },
+    "aadObjectId": {
+      "value": ""
+    },
+    "addSpRoleAssignment": {
+      "value": "no"
+    },
+    "fipsValidatedModules": {
+      "value": "Disabled"
+    },
+    "encryptionAtHost": {
+      "value": "Disabled"
+    },
+    "clusterName": {
+      "value": "petclinicarocluster"
+    },
+    "clusterRG": {
+      "value": ""
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "rpObjectId": {
+      "value": ""
+    },
+    "spokeVnetName": {
+      "value": "spoke-vnet"
+    },
+    "domain": {
+      "value": "petclinic"
+    },
+    "controlPlaneVnetName": {
+      "value": "controlplane"
+    },
+    "computeVnetName": {
+      "value": "compute"
+    },
+    "apiServerVisibility": {
+      "value": "Public"
+    },
+    "ingressVisibility": {
+      "value": "Public"
+    },
+    "computeNodeCount": {
+      "value": 3
+    },
+    "computeVmDiskSize": {
+      "value": 128
+    },
+    "controlPlaneVmSize": {
+      "value": "Standard_D8s_v3"
+    },
+    "computeVmSize": {
+      "value": "Standard_D4s_v3"
+    },
+    "serviceCidr": {
+      "value": "172.30.0.0/16"
+    },
+    "podCidr": {
+      "value": "10.128.0.0/14"
+    },
+    "version": {
+        "value": "4.10.40"
+    },
+    "url": {
+        "value": ""
+    },
+    "provisioningState": {
+        "value": "Succeeded"
+    },"apiurl": {
+      "value": ""
+    },"apip": {
+      "value": "20.172.133.127"
+    },"ingressip": {
+      "value": "20.172.133.96"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinic-vets
+  namespace: spring-petclinic
+#  labels:
+#    name: petclinic-vets
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: petclinic-vets
+  template:
+    metadata:
+      labels:
+        name: petclinic-vets
+    spec:
+      imagePullSecrets:
+      - name: "regcred"
+      serviceAccountName: spring-petclinic-sa
+      containers:
+      - name:  petclinic-vets
+        image: egapm/spring-petclinic:vets-svc
+        imagePullPolicy: Always
+        ports:
+         - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic-vets
+  namespace: spring-petclinic
+  labels:
+    name: petclinic-vets
+spec:
+  ports:    
+  - port: 8080
+    targetPort: 8080
+  selector:
+    name: petclinic-vets
+---

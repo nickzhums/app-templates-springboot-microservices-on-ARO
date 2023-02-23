@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinic-frontend
+  namespace: spring-petclinic
+  labels:
+   name: petclinic-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: petclinic-frontend
+  template:
+    metadata:
+      labels:
+        name: petclinic-frontend
+    spec:
+      volumes:
+      - name: egbtm
+        emptyDir: {}
+      imagePullSecrets:
+      - name: "regcred"        
+     # initcontainer to download eg java profiler
+      initContainers:
+      - name: setup-egbtm
+        image: eginnovations/java-profiler:7.2.0-v0.1
+        imagePullPolicy: Always
+        command:
+        - /bin/sh
+        args:
+        - -c
+        - cp -r /tmp/btm/* /opt/egbtm
+        volumeMounts:
+        - mountPath: /opt/egbtm
+          name: egbtm
+      serviceAccountName: spring-petclinic-sa
+      containers:
+      - name:  petclinic-frontend
+        image: egapm/spring-petclinic:frontend-svc
+        imagePullPolicy: Always
+        ports:
+         - containerPort: 8080
+        volumeMounts:
+         - name: egbtm
+           mountPath: /opt/egbtm
+        env:
+         - name: JAVA_TOOL_OPTIONS
+           value: "-DINSTRUMENTATION_LEVEL=1 -Duser.timezone=Asia/Singapore -javaagent:/opt/egbtm/eg_btm.jar -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.port=3333 -Dcom.sun.management.jmxremote.rmi.port=3333 -DeG_Service_Name=PetClinic-MicroSvc-App -DeG_Group_Name=petclinic-frontend -Degbtm.instance.port=8080 -Degbtm.instance.type=Tomcat_server -Xmx512m"
+         - name: EG_COLLECTOR_IP
+           valueFrom:
+             fieldRef:
+               fieldPath: status.hostIP
+      volumes:
+      - name: egbtm
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic-frontend
+  namespace: spring-petclinic
+  labels:
+    name: petclinic-frontend
+spec:
+  ports:    
+  - port: 8080
+    targetPort: 8080
+  selector:
+    name: petclinic-frontend
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: petclinic-frontend
+  namespace: spring-petclinic
+  annotations:
+    haproxy.router.openshift.io/timeout: 15m
+spec:
+  to:
+    kind: Service
+    name: petclinic-frontend
+  port:
+    targetPort: 8080
+---
