@@ -45,7 +45,9 @@ The newly created GitHub repo uses GitHub Actions to deploy Azure resources and 
 
     + AZURE_SUBSCRIPTION - Located in the Service Principal
 
-    + Also, make sure that you update the "CLUSTER_RG" String....it needs your Subcription ID!!!!
+    + Then make sure that you update the "CLUSTER_RG" String....it needs your Subcription ID!!!!
+
+    + Also, make sure that you copy your ".kube/config" file into the "file.crt" located in the infa/aro-bicep/modules folder. 
   
 ### Required Parameter Definitions 
 

@@ -336,6 +336,7 @@ jobs:
         openshift_username: kubeadmin
         openshift_password: ${{ env.ARO_PWD }}
         insecure_skip_tls_verify: true
+        certificate_authority_data: ./infra/aro-bicep/modules/file.crt
     - name: Create and expose pod1
       uses: redhat-actions/oc-new-app@v1
       with:
