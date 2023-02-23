@@ -86,7 +86,7 @@ The newly created GitHub repo uses GitHub Actions to deploy Azure resources and 
 
   + Copy it, and save it as a GitHUb Action Secret. 
 
-### Azure Protal Permmision Configuration
+### Azure Portal Permmision Configuration
 
 5. Verify your Azure Permissions ( You must have Contributor and User Access Administrator roles)
       
