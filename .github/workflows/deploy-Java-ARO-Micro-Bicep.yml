@@ -1,4 +1,4 @@
-# This workflow performs the following:
+# This workflow performs the following: (update)
 # - Database configuration
 # - Provisioning Azure Services  
 # - Create the spring-petclinic-ARO App on Docker
