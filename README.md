@@ -8,6 +8,7 @@ In this sample app template, the PetClinic application (a Spring Boot based app)
 Tech stack:
 
 - Azure Container Registry (ACR)
+- MySql DB
 - Azure Red Hat Openshift (ARO) Cluster
 - Azure Infra (Hub & Spoke Topology)
 - Azure Infra (VNet Peering)
